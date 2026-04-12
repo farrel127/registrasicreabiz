@@ -52,9 +52,14 @@
                     <div class="flex items-center gap-4 mb-8">
                         <img src="ALAMAT_LINK_LOGO_CREABIZ_KAMU_DISINI.png" alt="Logo Creabiz" class="h-16 w-auto object-contain bg-white p-2 rounded-xl shadow-lg">
                         <div>
-                            <h1 class="text-3xl md:text-4xl font-bold leading-tight">CREABIZ <span class="font-light">2026</span></h1>
-                            <p class="text-indigo-200 text-lg">Frameworks of Innovation: Bridging Creativity and Business.</p>
-                        </div>
+    <h1 class="text-3xl md:text-4xl font-bold leading-tight flex items-center flex-wrap gap-3">
+        CREABIZ <span class="font-light">2026</span>
+        <span class="bg-emerald-500 text-white text-sm md:text-base font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-md border border-emerald-400">
+            100% Gratis
+        </span>
+    </h1>
+    <p class="text-indigo-200 text-lg mt-2">Frameworks of Innovation: Bridging Creativity and Business.</p>
+</div>
                     </div>
 
                     <div class="space-y-6 text-indigo-100 leading-relaxed text-base md:text-lg">
@@ -305,26 +310,26 @@
         // ==========================================
         // SCRIPT PROTEKSI (ANTI KLIK KANAN & INSPECT)
         // ==========================================
-        document.addEventListener('contextmenu', event => event.preventDefault());
+        // document.addEventListener('contextmenu', event => event.preventDefault());
 
-        document.onkeydown = function (e) {
-            // Mencegah F12
-            if (e.keyCode == 123) { 
-                return false; 
-            } 
-            // Mencegah Ctrl+Shift+I (Windows) atau Cmd+Opt+I (Mac)
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 73) { 
-                return false; 
-            } 
-            // Mencegah Ctrl+Shift+J (Windows) atau Cmd+Opt+J (Mac)
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 74) { 
-                return false; 
-            } 
-            // Mencegah Ctrl+U (View Source)
-            if (e.ctrlKey && e.keyCode == 85) { 
-                return false; 
-            }
-        };
+        // document.onkeydown = function (e) {
+        //     // Mencegah F12
+        //     if (e.keyCode == 123) { 
+        //         return false; 
+        //     } 
+        //     // Mencegah Ctrl+Shift+I (Windows) atau Cmd+Opt+I (Mac)
+        //     if (e.ctrlKey && e.shiftKey && e.keyCode == 73) { 
+        //         return false; 
+        //     } 
+        //     // Mencegah Ctrl+Shift+J (Windows) atau Cmd+Opt+J (Mac)
+        //     if (e.ctrlKey && e.shiftKey && e.keyCode == 74) { 
+        //         return false; 
+        //     } 
+        //     // Mencegah Ctrl+U (View Source)
+        //     if (e.ctrlKey && e.keyCode == 85) { 
+        //         return false; 
+        //     }
+        // };
     </script>
 </body>
 </html>
