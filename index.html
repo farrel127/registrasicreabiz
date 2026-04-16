@@ -100,6 +100,20 @@
         <p class="text-slate-500 text-sm mb-2">&copy; 2026 Panitia CREABIZ. All rights reserved.</p>
         <p class="text-slate-600 text-xs font-mono tracking-wider">Developed with Panitia CREABIZ 2026</p>
     </footer>
+    <script>
+        //   ==========================================
+        // SCRIPT PROTEKSI (ANTI KLIK KANAN & INSPECT)
+        // Note: Hapus tanda double-slash (//) di bawah ini untuk mengaktifkan proteksi
+        // ==========================================
+        
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.onkeydown = function (e) {
+            if (e.keyCode == 123) { return false; } 
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 73) { return false; } 
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 74) { return false; } 
+            if (e.ctrlKey && e.keyCode == 85) { return false; }
+        };
+    </script>
 
     <style>
         @keyframes shine {
