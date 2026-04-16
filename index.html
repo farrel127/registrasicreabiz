@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> WORKSHOP CREABIZ 2026 - Coming Soon</title>
+    <title>CREABIZ 2026 - Coming Soon</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
@@ -22,18 +22,27 @@
             66% { transform: translate(-20px, 20px) scale(0.9); }
             100% { transform: translate(0px, 0px) scale(1); }
         }
-        .animate-blob {
-            animation: blob 7s infinite;
+        .animate-blob { animation: blob 7s infinite; }
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }
+
+        /* Animasi mengkilap untuk tombol WA */
+        @keyframes shine {
+            100% { transform: translateX(400%); }
         }
-        .animation-delay-2000 {
-            animation-delay: 2s;
+
+        /* Animasi gembok bergetar saat disentuh */
+        @keyframes lock-shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-3px) rotate(-5deg); }
+            75% { transform: translateX(3px) rotate(5deg); }
         }
-        .animation-delay-4000 {
-            animation-delay: 4s;
+        .group-hover\\:animate-lock:hover .lock-icon {
+            animation: lock-shake 0.4s ease-in-out;
         }
     </style>
 </head>
-<body class="relative min-h-screen text-slate-200 overflow-hidden flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
+<body class="relative min-h-screen text-slate-200 overflow-x-hidden flex flex-col justify-between selection:bg-indigo-500 selection:text-white">
 
     <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
         <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-indigo-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-40 animate-blob"></div>
@@ -52,12 +61,12 @@
         </div>
     </header>
 
-    <main class="relative z-10 flex-grow flex flex-col items-center justify-center px-4 text-center">
+    <main class="relative z-10 flex-grow flex flex-col items-center justify-center px-4 py-12 text-center">
         
-        <div class="mb-8 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 backdrop-blur-md shadow-[0_0_20px_rgba(99,102,241,0.2)]">
-            <span class="flex h-2 w-2 relative">
+        <div class="mb-8 inline-flex items-center gap-3 px-5 py-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 backdrop-blur-md shadow-[0_0_20px_rgba(99,102,241,0.2)]">
+            <span class="flex h-2.5 w-2.5 relative">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-indigo-500"></span>
             </span>
             <span class="text-xs md:text-sm font-semibold tracking-widest text-indigo-300 uppercase">
                 Tahap Persiapan
@@ -77,29 +86,42 @@
 
         <div class="w-24 h-1 bg-gradient-to-r from-transparent via-indigo-500 to-transparent mx-auto mb-8 opacity-50"></div>
 
-        <p class="text-sm md:text-base text-slate-400 max-w-2xl mx-auto leading-relaxed mb-12">
-            Kami sedang merancang pengalaman  workshop yang luar biasa untukmu. Jadwal pendaftaran resmi dan detail acara akan segera diumumkan. Bersiaplah!
+        <p class="text-sm md:text-base text-slate-400 max-w-2xl mx-auto leading-relaxed mb-12 px-4 md:px-0">
+            Kami sedang merancang pengalaman seminar dan workshop berskala nasional yang luar biasa untukmu. Jadwal pendaftaran resmi dan detail acara akan segera diumumkan.
         </p>
 
-        <div class="flex flex-col sm:flex-row gap-4">
+        <div class="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto sm:max-w-none sm:justify-center">
+            
+            <button disabled class="group group-hover:animate-lock relative w-full sm:w-auto px-8 py-4 bg-slate-800/40 backdrop-blur-md border border-slate-600/30 text-slate-400 font-semibold rounded-2xl cursor-not-allowed overflow-hidden flex items-center justify-center gap-3 transition-all duration-300 hover:border-red-500/40 hover:shadow-[0_0_20px_rgba(239,68,68,0.15)]">
+                <svg class="w-5 h-5 text-slate-500 group-hover:text-red-400 transition-colors lock-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                </svg>
+                <span>Daftar Sekarang</span>
+                
+                <div class="absolute inset-0 flex items-center justify-center gap-2 bg-slate-900/95 backdrop-blur-md translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+                    <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
+                    <span class="text-sm text-red-400 font-bold tracking-widest uppercase">Terkunci</span>
+                </div>
+            </button>
+
             <a href="https://wa.me/6281235912692?text=Halo%20Panitia%20CREABIZ,%20saya%20ingin%20mendapatkan%20info%20terbaru%20jika%20pendaftaran%20sudah%20dibuka." 
                target="_blank"
-               class="group relative px-8 py-4 bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/10 hover:border-indigo-400/50 text-white font-semibold rounded-2xl transition-all duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.1)] hover:shadow-[0_0_30px_rgba(99,102,241,0.3)] hover:-translate-y-1 overflow-hidden">
+               class="group relative w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/10 hover:border-indigo-400/50 text-white font-semibold rounded-2xl transition-all duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.1)] hover:shadow-[0_0_30px_rgba(99,102,241,0.3)] hover:-translate-y-1 flex items-center justify-center gap-3 overflow-hidden">
                 <div class="absolute inset-0 w-1/4 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:animate-[shine_1.5s_ease-in-out_infinite]"></div>
-                <div class="flex items-center gap-3">
-                    <svg class="w-5 h-5 text-indigo-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 3.82 0 6.933 3.111 6.934 6.936.001 3.826-3.114 6.938-6.934 6.944z"/>
-                    </svg>
-                    Kabari Saya Nanti
-                </div>
+                <svg class="w-5 h-5 text-indigo-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 3.82 0 6.933 3.111 6.934 6.936.001 3.826-3.114 6.938-6.934 6.944z"/>
+                </svg>
+                <span>Kabari Saya Nanti</span>
             </a>
+            
         </div>
     </main>
 
-    <footer class="relative z-10 w-full py-8 text-center border-t border-white/5 bg-slate-900/50 backdrop-blur-sm">
-        <p class="text-slate-500 text-sm mb-2">&copy; 2026 Panitia CREABIZ. All rights reserved.</p>
-        <p class="text-slate-600 text-xs font-mono tracking-wider">Developed with Panitia CREABIZ 2026</p>
+    <footer class="relative z-10 w-full py-6 text-center border-t border-white/5 bg-slate-900/50 backdrop-blur-sm mt-8">
+        <p class="text-slate-500 text-sm mb-1">&copy; 2026 Panitia CREABIZ. All rights reserved.</p>
+        <p class="text-slate-600 text-xs font-mono tracking-wider">Developed with ❤️ by Pael</p>
     </footer>
+
     <script>
         //   ==========================================
         // SCRIPT PROTEKSI (ANTI KLIK KANAN & INSPECT)
