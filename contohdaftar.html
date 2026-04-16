@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi CREABIZ 2026 - Workshop & Seminar</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background-color: #0f172a;
+        }
+        
+        /* Animasi cahaya berputar di background */
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob { animation: blob 7s infinite; }
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="min-h-screen text-slate-200 overflow-x-hidden selection:bg-indigo-500 selection:text-white">
+
+    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-indigo-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-blob"></div>
+        <div class="absolute top-[20%] right-[-10%] w-96 h-96 bg-fuchsia-600 rounded-full mix-blend-multiply filter blur-[128px] opacity-15 animate-blob animation-delay-2000"></div>
+    </div>
+
+    <header class="sticky top-0 z-50 w-full bg-slate-900/60 backdrop-blur-lg border-b border-white/5 py-4 px-6 md:px-12 flex justify-between items-center">
+        <img src="if.png" alt="Logo Himpunan" class="h-10 md:h-12 w-auto object-contain drop-shadow-lg">
+        <span class="text-xs md:text-sm text-slate-400 font-medium text-right uppercase tracking-widest">
+            HIMATIF USB YPKP
+        </span>
+    </header>
+
+    <main class="relative z-10 container mx-auto max-w-7xl p-4 sm:p-6 md:p-10">
+        
+        <section class="mb-16 text-center">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 to-white">
+                Pembicara Inspiratif
+            </h2>
+            <div class="max-w-2xl mx-auto glass-card rounded-[2.5rem] p-8 md:p-12 shadow-2xl hover:border-indigo-500/30 transition-all duration-500">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=256&h=256&q=80" 
+                     class="w-36 h-36 md:w-44 md:h-44 rounded-full mx-auto object-cover border-4 border-white/10 shadow-2xl mb-6 ring-8 ring-indigo-500/5">
+                <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">Zannuba Ariffah Chafsoh (Yenny Wahid)</h3>
+                <p class="text-indigo-400 font-semibold mb-6 tracking-widest uppercase text-sm">Direktur Wahid Foundation</p>
+                <p class="text-slate-400 text-sm md:text-base leading-relaxed">
+                    Yenny Wahid adalah aktivis dan tokoh masyarakat yang berfokus pada promosi perdamaian. Beliau memiliki pengalaman luas dalam advokasi kebijakan dan komunikasi publik di berbagai forum internasional.
+                </p>
+            </div>
+        </section>
+
+        <section class="flex flex-col lg:flex-row shadow-2xl rounded-[2.5rem] overflow-hidden glass-card border-white/10 mb-20">
+            
+            <div class="lg:w-5/12 p-8 md:p-12 text-white flex flex-col justify-between relative" 
+                 style="background-image: linear-gradient(135deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%), url('sem.JPG'); background-size: cover; background-position: center;">
+                
+                <div class="relative z-10">
+                    <div class="flex items-center gap-4 mb-10">
+                        <img src="ALAMAT_LINK_LOGO_CREABIZ_KAMU_DISINI.png" class="h-16 w-auto bg-white/10 backdrop-blur-md p-2 rounded-2xl border border-white/20">
+                        <div>
+                            <h1 class="text-3xl md:text-4xl font-bold flex items-center flex-wrap gap-3">
+                                CREABIZ <span class="font-light">2026</span>
+                                <span class="bg-emerald-500/20 text-emerald-400 text-xs font-bold px-3 py-1 rounded-full border border-emerald-500/30">100% GRATIS</span>
+                            </h1>
+                            <p class="text-indigo-300 mt-2 font-medium">Bridging Creativity and Business.</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6 text-slate-300 leading-relaxed">
+                        <h2 class="text-2xl font-semibold text-white border-b-2 border-indigo-500/50 pb-2 inline-block">Apa itu Creabiz?</h2>
+                        <p>Kegiatan tahunan prestige yang diselenggarakan oleh HIMATIF USB YPKP untuk membangun integrasi antara kreativitas dan strategi bisnis modern.</p>
+                    </div>
+                </div>
+
+                <div class="mt-12 bg-indigo-500/10 backdrop-blur-md p-6 rounded-2xl border border-indigo-500/20 space-y-4">
+                    <div class="flex items-center gap-4">
+                        <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        <span class="font-medium">Senin, 20 April 2026</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path></svg>
+                        <span class="font-medium">Gedung GSG USB YPKP</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:w-7/12 p-8 sm:p-12 lg:p-16">
+                <div class="mb-10">
+                    <h3 class="text-2xl md:text-3xl font-bold text-white">Formulir Pendaftaran</h3>
+                    <p class="text-slate-400 mt-2">Amankan kursi gratis kamu sekarang juga.</p>
+                </div>
+
+                <div class="mb-10 flex justify-between items-center bg-indigo-500/5 p-5 rounded-2xl border border-indigo-500/20">
+                    <div>
+                        <h3 class="text-sm md:text-base font-bold text-indigo-300">Sisa Kuota Kursi</h3>
+                        <p class="text-xs text-indigo-400/70 mt-1 uppercase tracking-widest">Update Real-Time</p>
+                    </div>
+                    <div class="bg-slate-900/50 px-5 py-3 rounded-xl border border-white/10">
+                        <span id="angka-kuota" class="text-xl md:text-2xl font-black text-indigo-400">...</span>
+                    </div>
+                </div>
+
+                <form name="creabiz-form" class="space-y-6">
+                    <style>
+                        .input-luxury {
+                            width: 100%;
+                            padding: 1rem;
+                            background-color: rgba(15, 23, 42, 0.5);
+                            border: 1px solid rgba(255, 255, 255, 0.1);
+                            border-radius: 1rem;
+                            color: white;
+                            transition: all 0.3s ease;
+                            outline: none;
+                        }
+                        .input-luxury:focus {
+                            border-color: #6366f1;
+                            background-color: rgba(30, 41, 59, 0.8);
+                            box-shadow: 0 0 20px rgba(99, 102, 241, 0.1);
+                        }
+                        label { font-weight: 500; font-size: 0.875rem; color: #94a3b8; margin-bottom: 0.5rem; display: block; }
+                    </style>
+
+                    <div>
+                        <label>Nama Lengkap</label>
+                        <input type="text" name="nama" placeholder="Sesuai KTM/KTP" required class="input-luxury">
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label>Jenis Kelamin</label>
+                            <select name="kelamin" required class="input-luxury cursor-pointer">
+                                <option value="" disabled selected>Pilih</option>
+                                <option value="Laki-laki">Laki-laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label>Angkatan</label>
+                            <select name="angkatan" required class="input-luxury cursor-pointer">
+                                <option value="" disabled selected>Tahun</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label>Fakultas</label>
+                        <select name="fakultas" id="fakultas" required class="input-luxury cursor-pointer">
+                            <option value="" disabled selected>Pilih Fakultas</option>
+                            <option value="Fakultas Ekonomi">Fakultas Ekonomi</option>
+                            <option value="Fakultas Teknik">Fakultas Teknik</option>
+                            <option value="Fakultas Ilmu Sosial dan Ilmu Politik">Fakultas Ilmu Sosial dan Ilmu Politik</option>
+                            <option value="Vokasi">Vokasi</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label>Program Studi</label>
+                        <select name="prodi" id="prodi" required class="input-luxury cursor-pointer disabled:opacity-50">
+                            <option value="" disabled selected>Pilih Fakultas Dahulu</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label>WhatsApp (Aktif)</label>
+                        <div class="relative">
+                            <span class="absolute left-4 top-4 text-slate-500">+62</span>
+                            <input type="tel" name="whatsapp" placeholder="8123456" required class="input-luxury pl-14">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="nama@email.com" required class="input-luxury">
+                    </div>
+
+                    <div class="pt-6">
+                        <button type="submit" id="btn-submit" 
+                                class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-4 rounded-2xl shadow-lg shadow-indigo-500/20 active:scale-[0.98] transition-all duration-300">
+                            Daftar Sekarang
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">Benefit Peserta</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="glass-card p-8 rounded-[2rem] text-center hover:-translate-y-2 transition-all duration-300">
+                    <div class="w-16 h-16 mx-auto bg-indigo-500/10 text-indigo-400 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">E-Certificate</h3>
+                    <p class="text-slate-400 text-sm">Sertifikat resmi sebagai bentuk partisipasi dan apresiasi dalam kegiatan CREABIZ.</p>
+                </div>
+                </div>
+        </section>
+
+        <section class="mb-10">
+            <div class="max-w-4xl mx-auto glass-card rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between border-indigo-500/20">
+                <div class="text-center md:text-left mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold text-white">Ada Pertanyaan?</h3>
+                    <p class="text-slate-400 mt-2">Hubungi panitia melalui WhatsApp untuk bantuan cepat.</p>
+                </div>
+                <a href="https://wa.me/6281234567890" target="_blank" class="bg-[#25D366] hover:bg-[#20bd5c] text-white px-8 py-4 rounded-2xl font-bold shadow-lg shadow-green-500/20 transition-all active:scale-95">
+                    Hubungi Panitia
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-8 text-center text-slate-500 text-sm border-t border-white/5 bg-slate-900/50 backdrop-blur-md">
+        &copy; 2026 Panitia CREABIZ. Developed by Panitia ITE Connect.
+    </footer>
+
+    <script>
+        const scriptURL = 'MASUKKAN_URL_GAS_ANDA_DI_SINI';
+        const form = document.forms['creabiz-form'];
+        const fakultasSelect = document.getElementById('fakultas');
+        const prodiSelect = document.getElementById('prodi');
+        const dataProdi = {
+            "Fakultas Ekonomi": ["S1 - Manajemen", "S1 - Akuntansi"],
+            "Fakultas Teknik": ["S1 - Teknik Industri", "S1 - Teknik Sipil", "S1 - Teknik Informatika", "S1 - Teknik Elektro", "S1 - Teknik Mesin", "S1 - Sistem Informasi"],
+            "Fakultas Ilmu Sosial dan Ilmu Politik": ["S1 - Ilmu Komunikasi", "S1 - Administrasi Bisnis"],
+            "Vokasi": ["D3 - Keuangan dan Perbankan", "D3 - Akuntansi", "D3 - Teknik Informatika"]
+        };
+
+        fakultasSelect.addEventListener('change', function() {
+            prodiSelect.innerHTML = '<option value="" disabled selected>Pilih Program Studi</option>';
+            dataProdi[this.value].forEach(p => {
+                const opt = document.createElement('option');
+                opt.value = opt.text = p;
+                prodiSelect.add(opt);
+            });
+        });
+
+        // Logika fetchKuota & submit (sama dengan kode sebelumnya, pastikan scriptURL benar)
+    </script>
+</body>
+</html>
