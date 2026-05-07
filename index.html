@@ -63,15 +63,14 @@
 
     <main class="relative z-10 flex-grow flex flex-col items-center justify-center px-4 py-12 text-center">
         
-       <div class="mb-8 inline-flex items-center gap-3 px-5 py-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 backdrop-blur-md shadow-[0_0_25px_rgba(16,185,129,0.3)]">
-    <span class="flex h-2.5 w-2.5 relative">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-    </span>
-    <span class="text-xs md:text-sm font-bold tracking-widest text-emerald-400 uppercase">
-        Pendaftaran Dibuka
-    </span>
-</div>
+       <div class="mb-8 inline-flex items-center gap-3 px-5 py-2 rounded-full border border-rose-500/40 bg-rose-500/10 backdrop-blur-md shadow-[0_0_25px_rgba(225,29,72,0.2)]">
+            <span class="flex h-2.5 w-2.5 relative">
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-rose-500"></span>
+            </span>
+            <span class="text-xs md:text-sm font-bold tracking-widest text-rose-400 uppercase">
+                Pendaftaran Ditutup
+            </span>
+        </div>
 
         <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6">
             <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 via-white to-fuchsia-200 drop-shadow-lg">
@@ -86,8 +85,8 @@
 
        <div class="w-24 h-1 bg-gradient-to-r from-transparent via-indigo-500 to-transparent mx-auto mb-8 opacity-50"></div>
 
-        <p class="text-sm md:text-base text-slate-400 max-w-2xl mx-auto leading-relaxed mb-12 px-4 md:px-0">
-            Kesempatan untuk mengamankan kursimu telah tiba! Segera lengkapi formulir pendaftaran di bawah ini dan jadilah bagian dari rangkaian <i>workshop</i> inovatif tahun ini. <strong class="text-indigo-400 font-medium">Kuota terbatas.</strong>
+       <p class="text-sm md:text-base text-slate-400 max-w-2xl mx-auto leading-relaxed mb-12 px-4 md:px-0">
+            Terima kasih atas antusiasme yang sangat luar biasa! Kuota pendaftaran CREABIZ 2026 telah terpenuhi sepenuhnya. Sampai jumpa di <i>event</i> inovatif HIMATIF USB YPKP selanjutnya!
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto sm:max-w-none sm:justify-center">
@@ -98,7 +97,12 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z"></path>
     </svg>
     
-    <span class="tracking-wide">Daftar Sekarang</span>
+    <button disabled class="group relative w-full sm:w-auto px-8 py-4 bg-slate-800/50 backdrop-blur-md border border-slate-700/50 text-slate-400 font-bold rounded-2xl flex items-center justify-center gap-3 cursor-not-allowed">
+            <svg class="w-6 h-6 text-rose-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+            <span class="tracking-wide">Pendaftaran Telah Ditutup</span>
+        </button>
     
     <div class="absolute inset-0 w-1/4 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 -translate-x-full group-hover:animate-[shine_1.5s_ease-in-out_infinite]"></div>
 </a>
