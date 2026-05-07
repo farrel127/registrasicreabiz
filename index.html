@@ -88,6 +88,24 @@
         <p class="text-sm md:text-base text-slate-400 max-w-2xl mx-auto leading-relaxed mb-12 px-4 md:px-0">
             Terima kasih atas antusiasme yang sangat luar biasa! Kuota pendaftaran CREABIZ 2026 telah terpenuhi sepenuhnya. Sampai jumpa di <i>event</i> inovatif HIMATIF USB YPKP selanjutnya!
         </p>
+        <div class="grid grid-cols-4 gap-3 md:gap-6 mb-12 w-full max-w-xl mx-auto px-2">
+            <div class="glass-card p-4 rounded-2xl border border-white/10 flex flex-col items-center justify-center shadow-2xl">
+                <span id="days" class="text-2xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-indigo-400">00</span>
+                <span class="text-[10px] md:text-xs uppercase tracking-widest text-slate-500 font-bold mt-1">Hari</span>
+            </div>
+            <div class="glass-card p-4 rounded-2xl border border-white/10 flex flex-col items-center justify-center shadow-2xl">
+                <span id="hours" class="text-2xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-indigo-400">00</span>
+                <span class="text-[10px] md:text-xs uppercase tracking-widest text-slate-500 font-bold mt-1">Jam</span>
+            </div>
+            <div class="glass-card p-4 rounded-2xl border border-white/10 flex flex-col items-center justify-center shadow-2xl">
+                <span id="minutes" class="text-2xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-indigo-400">00</span>
+                <span class="text-[10px] md:text-xs uppercase tracking-widest text-slate-500 font-bold mt-1">Menit</span>
+            </div>
+            <div class="glass-card p-4 rounded-2xl border border-white/10 flex flex-col items-center justify-center shadow-2xl">
+                <span id="seconds" class="text-2xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-indigo-400">00</span>
+                <span class="text-[10px] md:text-xs uppercase tracking-widest text-slate-500 font-bold mt-1">Detik</span>
+            </div>
+        </div>
 
         <div class="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto sm:max-w-none sm:justify-center">
             
@@ -127,6 +145,37 @@
             if (e.ctrlKey && e.shiftKey && e.keyCode == 74) { return false; } 
             if (e.ctrlKey && e.keyCode == 85) { return false; }
         };
+        // LOGIKA COUNTDOWN CREABIZ
+        const targetDate = new Date("May 8, 2026 08:30:00").getTime();
+
+        const updateCountdown = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            // Perhitungan waktu
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Tampilkan ke elemen
+            document.getElementById("days").innerText = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+
+            // Jika waktu habis
+            if (distance < 0) {
+                clearInterval(updateCountdown);
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+                
+                // Opsional: Mengubah teks deskripsi saat acara dimulai
+                document.querySelector("main p.text-slate-400").innerHTML = "Selamat datang di <b>CREABIZ 2026</b>! Acara sedang berlangsung di Gedung GSG USB YPKP.";
+            }
+        }, 1000);
     </script>
 </body>
 </html>
