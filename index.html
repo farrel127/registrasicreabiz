@@ -37,7 +37,7 @@
             25% { transform: translateX(-3px) rotate(-5deg); }
             75% { transform: translateX(3px) rotate(5deg); }
         }
-        .group-hover\\:animate-lock:hover .lock-icon {
+        .group-hover\:animate-lock:hover .lock-icon {
             animation: lock-shake 0.4s ease-in-out;
         }
     </style>
@@ -63,7 +63,7 @@
 
     <main class="relative z-10 flex-grow flex flex-col items-center justify-center px-4 py-12 text-center">
         
-       <div class="mb-8 inline-flex items-center gap-3 px-5 py-2 rounded-full border border-rose-500/40 bg-rose-500/10 backdrop-blur-md shadow-[0_0_25px_rgba(225,29,72,0.2)]">
+        <div class="mb-8 inline-flex items-center gap-3 px-5 py-2 rounded-full border border-rose-500/40 bg-rose-500/10 backdrop-blur-md shadow-[0_0_25px_rgba(225,29,72,0.2)]">
             <span class="flex h-2.5 w-2.5 relative">
                 <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-rose-500"></span>
             </span>
@@ -83,38 +83,29 @@
             Bridging Creativity and Business.
         </p>
 
-       <div class="w-24 h-1 bg-gradient-to-r from-transparent via-indigo-500 to-transparent mx-auto mb-8 opacity-50"></div>
+        <div class="w-24 h-1 bg-gradient-to-r from-transparent via-indigo-500 to-transparent mx-auto mb-8 opacity-50"></div>
 
-       <p class="text-sm md:text-base text-slate-400 max-w-2xl mx-auto leading-relaxed mb-12 px-4 md:px-0">
+        <p class="text-sm md:text-base text-slate-400 max-w-2xl mx-auto leading-relaxed mb-12 px-4 md:px-0">
             Terima kasih atas antusiasme yang sangat luar biasa! Kuota pendaftaran CREABIZ 2026 telah terpenuhi sepenuhnya. Sampai jumpa di <i>event</i> inovatif HIMATIF USB YPKP selanjutnya!
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 w-full max-w-md mx-auto sm:max-w-none sm:justify-center">
             
-            <a href="daftar" class="group relative w-full sm:w-auto px-8 py-4 bg-indigo-600 hover:bg-indigo-500 border border-indigo-400/50 text-white font-bold rounded-2xl overflow-hidden flex items-center justify-center gap-3 transition-all duration-300 shadow-[0_0_20px_rgba(99,102,241,0.4)] hover:shadow-[0_0_30px_rgba(99,102,241,0.6)] hover:-translate-y-1 active:scale-95">
-    
-    <svg class="w-6 h-6 text-indigo-200 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z"></path>
-    </svg>
-    
-    <button disabled class="group relative w-full sm:w-auto px-8 py-4 bg-slate-800/50 backdrop-blur-md border border-slate-700/50 text-slate-400 font-bold rounded-2xl flex items-center justify-center gap-3 cursor-not-allowed">
-            <svg class="w-6 h-6 text-rose-500/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-            </svg>
-            <span class="tracking-wide">Pendaftaran Telah Ditutup</span>
-        </button>
-    
-    <div class="absolute inset-0 w-1/4 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 -translate-x-full group-hover:animate-[shine_1.5s_ease-in-out_infinite]"></div>
-</a>
+            <button disabled class="group relative w-full sm:w-auto px-8 py-4 bg-slate-800/50 backdrop-blur-md border border-slate-700/50 text-slate-400 font-bold rounded-2xl flex items-center justify-center gap-3 cursor-not-allowed">
+                <svg class="w-6 h-6 text-rose-500/70 lock-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                </svg>
+                <span class="tracking-wide">Pendaftaran Ditutup</span>
+            </button>
 
-            <a href="https://wa.me/6281235912692?text=Halo%20Panitia%20CREABIZ,%20saya%20ingin%20mendapatkan%20info%20terbaru%20jika%20pendaftaran%20sudah%20dibuka." 
+            <a href="https://wa.me/6281235912692?text=Halo%20Panitia%20CREABIZ,%20saya%20butuh%20informasi%20terkait%20event%20ini." 
                target="_blank"
                class="group relative w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/10 hover:border-indigo-400/50 text-white font-semibold rounded-2xl transition-all duration-300 shadow-[0_4px_30px_rgba(0,0,0,0.1)] hover:shadow-[0_0_30px_rgba(99,102,241,0.3)] hover:-translate-y-1 flex items-center justify-center gap-3 overflow-hidden">
                 <div class="absolute inset-0 w-1/4 h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 -translate-x-full group-hover:animate-[shine_1.5s_ease-in-out_infinite]"></div>
                 <svg class="w-5 h-5 text-indigo-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 3.82 0 6.933 3.111 6.934 6.936.001 3.826-3.114 6.938-6.934 6.944z"/>
                 </svg>
-                <span>Kabari Saya Nanti</span>
+                <span>Hubungi Panitia</span>
             </a>
             
         </div>
@@ -122,15 +113,13 @@
 
     <footer class="relative z-10 w-full py-6 text-center border-t border-white/5 bg-slate-900/50 backdrop-blur-sm mt-8">
         <p class="text-slate-500 text-sm mb-1">&copy; 2026 Panitia ITE Connect. All rights reserved.</p>
-        <p class="text-slate-600 text-xs font-mono tracking-wider">Developed with Panitia ITE Connect.</p>
+        <p class="text-slate-600 text-xs font-mono tracking-wider">Developed by Panitia ITE Connect.</p>
     </footer>
 
     <script>
-        //   ==========================================
-        // SCRIPT PROTEKSI (ANTI KLIK KANAN & INSPECT)
-        // Note: Hapus tanda double-slash (//) di bawah ini untuk mengaktifkan proteksi
         // ==========================================
-        
+        // SCRIPT PROTEKSI (ANTI KLIK KANAN & INSPECT)
+        // ==========================================
         document.addEventListener('contextmenu', event => event.preventDefault());
         document.onkeydown = function (e) {
             if (e.keyCode == 123) { return false; } 
@@ -139,11 +128,5 @@
             if (e.ctrlKey && e.keyCode == 85) { return false; }
         };
     </script>
-
-    <style>
-        @keyframes shine {
-            100% { transform: translateX(400%); }
-        }
-    </style>
 </body>
 </html>
